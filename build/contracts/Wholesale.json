@@ -1,0 +1,461 @@
+{
+  "contractName": "Wholesale",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.9+commit.e5eed63a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Wholesale.sol\":\"Wholesale\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Ownable.sol\":{\"keccak256\":\"0xb77bd55df181bc73fb061610e88d32d1fd56804e79e95148e21cf9807ba9804d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://04c394626d987155eddde6b01f8ad6e9219a6963fe16f6e29e14305e796bcd28\",\"dweb:/ipfs/QmS5wZwWDnZDnGVxfigVzL1PgZVN69ukt7FpR4KXcryD4C\"]},\"project:/contracts/Roles.sol\":{\"keccak256\":\"0x9519da94d326a83fbcfdc0468be01efc2844a9f4a0b81b3bafc8caa4e9d87715\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fc4658a05876aaf1394f4588346d8a6255abc7984343a310c83ffa48369b5888\",\"dweb:/ipfs/QmQNQZj5byaum5d4AFUjfSzzHAmsYNHzu1SBU69rgNpfrw\"]},\"project:/contracts/Wholesale.sol\":{\"keccak256\":\"0x8261f9fa0f48638769515eb7e42a6bc5c615f00155ab2421bd6654da77780901\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://4f83085743cd94563fb602ea75f7cbfb99f17d2557ad496a816c32129fa6c19c\",\"dweb:/ipfs/Qma4XDSdX4mn871coomWniFx7S8uCabZryFUEux3go9XrA\"]}},\"version\":1}",
+  "bytecode": "0x6080604052739ceadafc54ed585f30abdcc25a96f2146db3686e600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550348015606457600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603f8060b26000396000f3fe6080604052600080fdfea2646970667358221220eb9040a7809646c2a19b645ed8e77e15c039fabc2ffdbb2630de424ddc3b8ed564736f6c63430008090033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220eb9040a7809646c2a19b645ed8e77e15c039fabc2ffdbb2630de424ddc3b8ed564736f6c63430008090033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "113:170:3:-:0;;;179:42;154:67;;;;;;;;;;;;;;;;;;;;113:170;;;;;;;;;;141:10:1;133:5;;:18;;;;;;;;;;;;;;;;;;113:170:3;;;;;;",
+  "deployedSourceMap": "113:170:3:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.9.0;\n\nimport \"./Ownable.sol\";\nimport \"./Roles.sol\";\n\ncontract Wholesale is Ownable, Roles {\n  address private dealer = 0x9ceaDAFC54eD585f30AbdCc25A96f2146dB3686e;\n\n  struct Store {\n    string city;\n    uint balance;\n  }\n\n\n}\n",
+  "sourcePath": "/home/alek/Code/wholesale-dapp/contracts/Wholesale.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Wholesale.sol",
+    "exportedSymbols": {
+      "Ownable": [
+        60
+      ],
+      "Roles": [
+        130
+      ],
+      "Wholesale": [
+        147
+      ]
+    },
+    "id": 148,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 132,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:3"
+      },
+      {
+        "absolutePath": "project:/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 133,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 148,
+        "sourceUnit": 61,
+        "src": "66:23:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/Roles.sol",
+        "file": "./Roles.sol",
+        "id": 134,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 148,
+        "sourceUnit": 131,
+        "src": "90:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 135,
+              "name": "Ownable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 60,
+              "src": "135:7:3"
+            },
+            "id": 136,
+            "nodeType": "InheritanceSpecifier",
+            "src": "135:7:3"
+          },
+          {
+            "baseName": {
+              "id": 137,
+              "name": "Roles",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 130,
+              "src": "144:5:3"
+            },
+            "id": 138,
+            "nodeType": "InheritanceSpecifier",
+            "src": "144:5:3"
+          }
+        ],
+        "canonicalName": "Wholesale",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 147,
+        "linearizedBaseContracts": [
+          147,
+          130,
+          60
+        ],
+        "name": "Wholesale",
+        "nameLocation": "122:9:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 141,
+            "mutability": "mutable",
+            "name": "dealer",
+            "nameLocation": "170:6:3",
+            "nodeType": "VariableDeclaration",
+            "scope": 147,
+            "src": "154:67:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 139,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "154:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307839636561444146433534654435383566333041626443633235413936663231343664423336383665",
+              "id": 140,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "179:42:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x9ceaDAFC54eD585f30AbdCc25A96f2146dB3686e"
+            },
+            "visibility": "private"
+          },
+          {
+            "canonicalName": "Wholesale.Store",
+            "id": 146,
+            "members": [
+              {
+                "constant": false,
+                "id": 143,
+                "mutability": "mutable",
+                "name": "city",
+                "nameLocation": "252:4:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 146,
+                "src": "245:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 142,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 145,
+                "mutability": "mutable",
+                "name": "balance",
+                "nameLocation": "267:7:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 146,
+                "src": "262:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 144,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "262:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Store",
+            "nameLocation": "233:5:3",
+            "nodeType": "StructDefinition",
+            "scope": 147,
+            "src": "226:53:3",
+            "visibility": "public"
+          }
+        ],
+        "scope": 148,
+        "src": "113:170:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:252:3"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/Wholesale.sol",
+    "exportedSymbols": {
+      "Ownable": [
+        60
+      ],
+      "Roles": [
+        130
+      ],
+      "Wholesale": [
+        147
+      ]
+    },
+    "id": 148,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 132,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:3"
+      },
+      {
+        "absolutePath": "project:/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 133,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 148,
+        "sourceUnit": 61,
+        "src": "66:23:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "project:/contracts/Roles.sol",
+        "file": "./Roles.sol",
+        "id": 134,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 148,
+        "sourceUnit": 131,
+        "src": "90:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 135,
+              "name": "Ownable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 60,
+              "src": "135:7:3"
+            },
+            "id": 136,
+            "nodeType": "InheritanceSpecifier",
+            "src": "135:7:3"
+          },
+          {
+            "baseName": {
+              "id": 137,
+              "name": "Roles",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 130,
+              "src": "144:5:3"
+            },
+            "id": 138,
+            "nodeType": "InheritanceSpecifier",
+            "src": "144:5:3"
+          }
+        ],
+        "canonicalName": "Wholesale",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 147,
+        "linearizedBaseContracts": [
+          147,
+          130,
+          60
+        ],
+        "name": "Wholesale",
+        "nameLocation": "122:9:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 141,
+            "mutability": "mutable",
+            "name": "dealer",
+            "nameLocation": "170:6:3",
+            "nodeType": "VariableDeclaration",
+            "scope": 147,
+            "src": "154:67:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 139,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "154:7:3",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "hexValue": "307839636561444146433534654435383566333041626443633235413936663231343664423336383665",
+              "id": 140,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "179:42:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "value": "0x9ceaDAFC54eD585f30AbdCc25A96f2146dB3686e"
+            },
+            "visibility": "private"
+          },
+          {
+            "canonicalName": "Wholesale.Store",
+            "id": 146,
+            "members": [
+              {
+                "constant": false,
+                "id": 143,
+                "mutability": "mutable",
+                "name": "city",
+                "nameLocation": "252:4:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 146,
+                "src": "245:11:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 142,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "245:6:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 145,
+                "mutability": "mutable",
+                "name": "balance",
+                "nameLocation": "267:7:3",
+                "nodeType": "VariableDeclaration",
+                "scope": 146,
+                "src": "262:12:3",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 144,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "262:4:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "Store",
+            "nameLocation": "233:5:3",
+            "nodeType": "StructDefinition",
+            "scope": 147,
+            "src": "226:53:3",
+            "visibility": "public"
+          }
+        ],
+        "scope": 148,
+        "src": "113:170:3",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:252:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.9+commit.e5eed63a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-20T08:37:04.275Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

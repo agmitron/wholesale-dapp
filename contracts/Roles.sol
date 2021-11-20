@@ -1,18 +1,33 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.22 <0.9.0;
 
-contract BaseAccountRoles {
-    mapping(address => mapping(uint256 => bool)) accountRoles;
+import "./Ownable.sol";
 
-    function addAccountRole(address account, uint256 role) internal {
+contract Roles is Ownable {
+    enum RolesEnum {
+      Admin,
+      Seller,
+      Customer,
+      Guest,
+      Store
+    }
+
+    mapping(address => mapping(RolesEnum => bool)) accountRoles;
+
+    function addAccountRole(address account, RolesEnum role) internal onlyOwner {
         accountRoles[account][role] = true;
     }
 
-    function hasAccountRole(address account, uint256 role)
+    function hasAccountRole(address account, RolesEnum role)
         internal
         view
         returns (bool)
     {
         return accountRoles[account][role];
+    }
+
+    modifier onlyRole(RolesEnum role) {
+      require(hasAccountRole(msg.sender, role), "You don't have enough permissions to call this method.");
+      _;
     }
 }
